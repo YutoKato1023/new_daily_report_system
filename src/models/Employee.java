@@ -130,7 +130,7 @@ public class Employee {
     }
 
 
-    public Timestamp getUpdate_at() {
+    public Timestamp getUpdated_at() {
         return updated_at;
     }
 
