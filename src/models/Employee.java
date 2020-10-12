@@ -23,11 +23,11 @@ import javax.persistence.Table;
             query = "SELECT COUNT (e) FROM Employee AS e"
             ),
     @NamedQuery(
-            name = "checkRegisteredCode",
+            name = "checkRegisterdCode",
             query = "SELECT COUNT (e) FROM Employee AS e WHERE e.code = :code"
             ),
     @NamedQuery(
-            name = "checkLoginCodeAndPassward",
+            name = "checkLoginCodeAndPassword",
             query = "SELECT e FROM Employee AS e WHERE e.delete_flag = 0 AND e.code = :code AND e.password = :pass"
             )
 })
@@ -63,7 +63,7 @@ public class Employee {
 
 
     @Column(name = "updated_at", nullable = false)
-    private Timestamp update_at;
+    private Timestamp updated_at;
 
 
     @Column(name = "delete_flag", nullable = false)
@@ -105,7 +105,7 @@ public class Employee {
     }
 
 
-    public void setPassward(String password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
@@ -131,21 +131,21 @@ public class Employee {
 
 
     public Timestamp getUpdate_at() {
-        return update_at;
+        return updated_at;
     }
 
 
-    public void setUpdate_at(Timestamp update_at) {
-        this.update_at = update_at;
+    public void setUpdated_at(Timestamp update_at) {
+        this.updated_at = update_at;
     }
 
 
-    public Integer getDelete_dlag() {
+    public Integer getDelete_flag() {
         return delete_flag;
     }
 
 
-    public void setDelete_dlag(Integer delete_flag) {
+    public void setDelete_flag(Integer delete_flag) {
         this.delete_flag = delete_flag;
     }
 
