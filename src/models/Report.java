@@ -70,6 +70,14 @@ public class Report {
     @Column(name = "updated_at", nullable = false)
     private Timestamp updated_at;
 
+
+    @Column(name = "startWork", nullable = false)  //出勤時間
+    private String startWork;
+
+    @Column(name = "finishWork", nullable = false)  //退勤時間
+    private String finishWork;
+
+
     public Integer getId() {
         return id;
     }
@@ -126,6 +134,21 @@ public class Report {
         this.updated_at = updated_at;
     }
 
+    public String getStartWork() {
+        return startWork;
+    }
+
+    public void setStartWork(String startWork) {
+        this.startWork = startWork;
+    }
+
+    public String getFinishWork() {
+        return finishWork;
+    }
+
+    public void setFinishWork(String finishWork) {
+        this.finishWork = finishWork;
+    }
 
 
 

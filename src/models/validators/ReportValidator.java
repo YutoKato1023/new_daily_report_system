@@ -19,8 +19,20 @@ public class ReportValidator {
             errors.add(content_error);
         }
 
+        String startWork_error = _validateStartWork(r.getStartWork());
+        if(!startWork_error.equals("")) {
+            errors.add(startWork_error);
+        }
+
+        String finishWork_error = _validateFinishWork(r.getFinishWork());
+        if(!finishWork_error.equals("")) {
+            errors.add(finishWork_error);
+
+        }
+
         return errors;
     }
+
 
     private static String _validateTitle(String title) {
         if(title == null || title.equals("")) {
@@ -37,4 +49,21 @@ public class ReportValidator {
 
         return "";
     }
+
+    private static String _validateStartWork(String startWork) {
+        if(startWork == null || startWork.equals("")) {
+            return "出勤時間を入力してください。";
+            }
+
+        return "";
+    }
+
+    private static String _validateFinishWork(String finishWork) {
+        if(finishWork == null || finishWork.equals("")) {
+            return "退勤時間を入力してください。";
+            }
+
+        return "";
+    }
+
 }
