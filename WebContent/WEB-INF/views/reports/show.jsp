@@ -10,6 +10,14 @@
                 <table>
                     <tbody>
                         <tr>
+                            <th>出勤時間</th>
+                            <td><c:out value="${report.startWork}" /></td>
+                        </tr>
+                        <tr>
+                            <th>退勤時間</th>
+                            <td><c:out value="${report.finishWork}" /></td>
+                        </tr>
+                        <tr>
                             <th>氏名</th>
                             <td><c:out value="${report.employee.name}" /></td>
                         </tr>
